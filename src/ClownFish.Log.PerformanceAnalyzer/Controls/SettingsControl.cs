@@ -27,7 +27,7 @@ namespace ClownFish.Log.PerformanceAnalyzer
 		{
 			txtMongoDbConnectionString.Text = settings.MongoDbConnectionString;
 			txtLoginCookieName.Text = settings.LoginCookieName;
-			txtLoginRequestRaw.Text = settings.LoginRequestRaw.Value.Replace("\n", "\r\n");
+			txtLoginRequestRaw.Text = settings.LoginRequestRaw?.Value.Replace("\n", "\r\n");
 		}
 
 		private void btnCancelSetting_Click(object sender, EventArgs e)

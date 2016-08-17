@@ -52,7 +52,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(13, 38);
+			this.label2.Location = new System.Drawing.Point(13, 41);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(41, 12);
 			this.label2.TabIndex = 2;
@@ -61,7 +61,7 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(13, 66);
+			this.label3.Location = new System.Drawing.Point(13, 72);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(59, 12);
 			this.label3.TabIndex = 4;
@@ -70,7 +70,7 @@
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(13, 93);
+			this.label4.Location = new System.Drawing.Point(13, 102);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(29, 12);
 			this.label4.TabIndex = 6;
@@ -88,7 +88,7 @@
 			this.cboDbType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
 			this.cboDbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cboDbType.FormattingEnabled = true;
-			this.cboDbType.Location = new System.Drawing.Point(79, 35);
+			this.cboDbType.Location = new System.Drawing.Point(79, 38);
 			this.cboDbType.MaxDropDownItems = 30;
 			this.cboDbType.Name = "cboDbType";
 			this.cboDbType.Size = new System.Drawing.Size(251, 22);
@@ -99,14 +99,14 @@
 			// 
 			this.cboDirection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cboDirection.FormattingEnabled = true;
-			this.cboDirection.Location = new System.Drawing.Point(79, 64);
+			this.cboDirection.Location = new System.Drawing.Point(79, 70);
 			this.cboDirection.Name = "cboDirection";
 			this.cboDirection.Size = new System.Drawing.Size(251, 20);
 			this.cboDirection.TabIndex = 5;
 			// 
 			// nudSize
 			// 
-			this.nudSize.Location = new System.Drawing.Point(79, 92);
+			this.nudSize.Location = new System.Drawing.Point(79, 101);
 			this.nudSize.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -124,7 +124,7 @@
 			// btnCancel
 			// 
 			this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-			this.btnCancel.Location = new System.Drawing.Point(255, 125);
+			this.btnCancel.Location = new System.Drawing.Point(255, 136);
 			this.btnCancel.Name = "btnCancel";
 			this.btnCancel.Size = new System.Drawing.Size(75, 21);
 			this.btnCancel.TabIndex = 9;
@@ -133,7 +133,7 @@
 			// 
 			// btnOK
 			// 
-			this.btnOK.Location = new System.Drawing.Point(147, 125);
+			this.btnOK.Location = new System.Drawing.Point(147, 136);
 			this.btnOK.Name = "btnOK";
 			this.btnOK.Size = new System.Drawing.Size(75, 21);
 			this.btnOK.TabIndex = 8;
@@ -147,7 +147,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.CancelButton = this.btnCancel;
-			this.ClientSize = new System.Drawing.Size(362, 167);
+			this.ClientSize = new System.Drawing.Size(355, 179);
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.btnOK);
 			this.Controls.Add(this.nudSize);

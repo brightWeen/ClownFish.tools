@@ -29,13 +29,14 @@ namespace ClownFish.Log.PerformanceAnalyzer
 		{
 			SetIcon();
 
+			// 加载参数
+			_runTimeSettings = RunTimeSettings.LoadSettings();
+
 			logSearchControl1.GetRunTimeSettings = () => _runTimeSettings;
 			logSearchControl1.ReSendButtonClick += LogSearchControl1_ReSendButtonClick;
 
 			sendRequestControl1.GetRunTimeSettings = () => _runTimeSettings;
-
-			// 加载参数
-			_runTimeSettings = RunTimeSettings.LoadSettings();
+					
 
 			// 将参数显示到设置界面
 			settingsControl1.ShowSettings(_runTimeSettings);

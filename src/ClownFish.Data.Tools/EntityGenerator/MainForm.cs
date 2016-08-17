@@ -28,7 +28,7 @@ namespace ClownFish.Data.Tools.EntityGenerator
 		private static readonly string STR_None = "[None]";
 
 		private static readonly string ConnectionStringHistoryFile =
-			Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "ClownFishGenerator.txt");
+			Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "ConnectionString.txt");
 
 		private string _connectionString;
 

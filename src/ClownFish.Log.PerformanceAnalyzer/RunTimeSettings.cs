@@ -30,7 +30,10 @@ namespace ClownFish.Log.PerformanceAnalyzer
 		internal static RunTimeSettings LoadSettings()
 		{
 			string configFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "RunTimeSettings.config");
-			return ClownFish.Base.Xml.XmlHelper.XmlDeserializeFromFile<RunTimeSettings>(configFilePath);
+			if( File.Exists(configFilePath) )
+				return ClownFish.Base.Xml.XmlHelper.XmlDeserializeFromFile<RunTimeSettings>(configFilePath);
+			else
+				return new RunTimeSettings();
 		}
 
 

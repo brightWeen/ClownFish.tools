@@ -105,12 +105,19 @@ namespace ClownFish.Log.PerformanceAnalyzer
 				return;
 			}
 
+			string connectionString = GetRunTimeSettings().MongoDbConnectionString;
+			if( string.IsNullOrEmpty(connectionString)) {
+				MessageBox.Show("请设置MongoDB连接字符串参数后，才能搜索日志。", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				return;
+			}
+
+
 			btnSearchData.Tag = btnSearchData.Text;
 			btnSearchData.Text = "正在搜索...";
 			btnSearchData.Enabled = false;
 
 			try {
-				List<GroupResult> list = await Task.Run(() => SearchLog(start, end));
+				List<GroupResult> list = await Task.Run(() => SearchLog(start, end, connectionString));
 				//List<GroupResult> list = SearchLog(start, end);
 				ShowGroupResult(list);
 			}
@@ -121,11 +128,11 @@ namespace ClownFish.Log.PerformanceAnalyzer
 		}
 
 
-		private List<GroupResult> SearchLog(DateTime start, DateTime end)
+		private List<GroupResult> SearchLog(DateTime start, DateTime end, string connectionString)
 		{
 			Stopwatch watch = Stopwatch.StartNew();
 
-			List<GroupResult> list = _logAnalyzer.Search(GetRunTimeSettings().MongoDbConnectionString, start, end);
+			List<GroupResult> list = _logAnalyzer.Search(connectionString, start, end);
 
 			//MessageBox.Show(list.Count.ToString());
 

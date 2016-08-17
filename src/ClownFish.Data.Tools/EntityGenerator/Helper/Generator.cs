@@ -69,9 +69,9 @@ namespace ClownFish.Data.Tools.EntityGenerator
 				|| spname.StartsWithIgnoreCase("query")
 				|| spname.StartsWithIgnoreCase("search") ) {
 					if( spname.EndsWithIgnoreCase("ById") || spname.EndsWithIgnoreCase("ByGuid") )
-						return string.Format("TModel item = StoreProcedure.Create(\"{0}\").ToSingle<TModel>();\r\n", spname);
+						return string.Format("XxxEntity item = StoreProcedure.Create(\"{0}\").ToSingle<XxxEntity>();\r\n", spname);
 					else
-						string.Format("List<TModel> list = StoreProcedure.Create(\"{0}\").ToList<TModel>();\r\n", spname);
+						string.Format("List<XxxEntity> list = StoreProcedure.Create(\"{0}\").ToList<XxxEntity>();\r\n", spname);
 				}
 				else
 					return string.Format("StoreProcedure.Create(\"{0}\").ExecuteNonQuery();", spname);
@@ -117,9 +117,9 @@ namespace ClownFish.Data.Tools.EntityGenerator
 					|| spname.StartsWithIgnoreCase("query")
 					|| spname.StartsWithIgnoreCase("search") ) {
 				if( spname.EndsWithIgnoreCase("ById") || spname.EndsWithIgnoreCase("ByGuid") )
-					sb.AppendFormat("TModel item = StoreProcedure.Create(\"{0}\", parameters).ToSingle<TModel>();\r\n", spname);
+					sb.AppendFormat("XxxEntity item = StoreProcedure.Create(\"{0}\", parameters).ToSingle<XxxEntity>();\r\n", spname);
 				else
-					sb.AppendFormat("List<TModel> list = StoreProcedure.Create(\"{0}\", parameters).ToList<TModel>();\r\n", spname);
+					sb.AppendFormat("List<XxxEntity> list = StoreProcedure.Create(\"{0}\", parameters).ToList<XxxEntity>();\r\n", spname);
 			}
 			else
 				sb.AppendFormat("StoreProcedure.Create(\"{0}\", parameters).ExecuteNonQuery();", spname);

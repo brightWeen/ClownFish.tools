@@ -45,8 +45,15 @@ namespace ClownFish.Log.PerformanceAnalyzer
 				return;
 			}
 
-			try {
-				RunTimeSettings settings = GetRunTimeSettings();
+			RunTimeSettings settings = GetRunTimeSettings();
+			if( settings.LoginRequestRaw == null 
+				||string.IsNullOrEmpty(settings.LoginRequestRaw) 
+				|| string.IsNullOrEmpty(settings.LoginCookieName) ) {
+				MessageBox.Show("请设置登录参数后，才能发送请求。", this.FindForm().Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				return;
+			}
+
+			try {				
 				RequestHelper helper = new RequestHelper(settings.LoginRequestRaw, settings.LoginCookieName);
 
 				btnResenExecute.Enabled = false;

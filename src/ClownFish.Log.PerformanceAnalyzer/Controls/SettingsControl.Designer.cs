@@ -104,9 +104,9 @@
 			this.label1.AutoSize = true;
 			this.label1.Location = new System.Drawing.Point(11, 75);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(401, 12);
+			this.label1.Size = new System.Drawing.Size(317, 12);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "请输入可用于登请输入可用于登录的请求文本（请求行，请求头，请求体）";
+			this.label1.Text = "请输入可用于登录的请求文本（请求行，请求头，请求体）";
 			// 
 			// groupBox1
 			// 
