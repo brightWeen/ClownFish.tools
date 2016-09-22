@@ -291,10 +291,10 @@ namespace ClownFish.FiddlerPulgin
 				string cacheControl = oSession.GetResponseHeader<string>("Cache-Control");
 
 				if( string.IsNullOrEmpty(expires) || cacheControl.StartsWith("public, max-age=") == false )
-					this._notReasonableCtrl.AddSession("没有设置缓存响应头*", oSession, true);
+					this._notReasonableCtrl.AddSession("资源文件没有设置缓存响应头*", oSession, true);
 
 				if( s_urlTimeVersionRegex.IsMatch(oSession.PathAndQuery) == false )
-					this._notReasonableCtrl.AddSession("没有指定版本号*", oSession, true);
+					this._notReasonableCtrl.AddSession("资源文件没有指定版本号*", oSession, true);
 			}
 
 
